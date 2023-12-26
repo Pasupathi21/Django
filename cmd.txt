@@ -1,0 +1,8 @@
+1) install django package
+    py -m pip install django
+
+2) create django app
+
+    django-admin --help (list the all related cmd)
+
+    django-admin startproject <pro_name>
