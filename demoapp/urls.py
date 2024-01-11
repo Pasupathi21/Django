@@ -20,5 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Just include the sub app route to main app
-    path('/challenges', include('challenges.urls'))
+    path('challenges/', include('challenges.urls'), name="challege_app")
 ]
