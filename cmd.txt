@@ -12,4 +12,4 @@
 
 
 4) Run application
-    python manage.py runserver
+    python manage.py runserver.
