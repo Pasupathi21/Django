@@ -56,7 +56,13 @@ def message(request, message_str):
     <div style="display: flex; align-item: center; justify-content: center"> 
         <h2>{message_str}</h2
     </div>
-'''
+    '''
         return HttpResponse(alert_templete)
+    except (TypeError, ValueError) as Error:
+        return HttpResponseServerError(Error)
+    
+def showIndex(request):
+    try:
+        return render(request, 'challenges/test.html', {'test_text': 'Hi'})
     except (TypeError, ValueError) as Error:
         return HttpResponseServerError(Error)

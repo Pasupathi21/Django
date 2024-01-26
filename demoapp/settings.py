@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # ------------ add created app ----------
+    'challenges',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +56,10 @@ ROOT_URLCONF = 'demoapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            # --------- Adding App template folder path
+            BASE_DIR / 'challenges' /'template'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
